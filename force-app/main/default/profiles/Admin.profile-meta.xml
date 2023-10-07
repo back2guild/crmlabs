@@ -120,6 +120,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field
+    >Action_Plan_Template_Version__c.Is_Action_Plan_Template_Editable__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Action_Plan_Template_Version__c.Status__c</field>
         <readable>true</readable>
@@ -142,6 +148,12 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Action_Plan_Template__c.IsAdHocItemCreationEnabled__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field
+    >Action_Plan_Template__c.Is_Action_Plan_Template_Editable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
