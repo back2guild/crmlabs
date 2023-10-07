@@ -18,7 +18,6 @@ function main() {
             b) BROWSER=$OPTARG;;
         esac
     done
-    echo "COMMAND = $COMMAND, BROWSER = $BROWSER"
     if [ "$COMMAND" == "open" ]
     then
     sf org open --target-org crmlabs --browser $BROWSER
