@@ -85,6 +85,7 @@
         <fields>Inactivation_Datetime__c</fields>
         <fields>Status__c</fields>
         <fields>Version__c</fields>
+        <fields>Is_Action_Plan_Template_Editable__c</fields>
         <relatedList
     >Action_Plan_Template_Version__c.Action_Plan_Template__c</relatedList>
         <sortField>Version__c</sortField>

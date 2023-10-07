@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Action_Plan_Template_Editable</fullName>
+    <active>true</active>
+    <description
+  >Active template is not editable, Deactivate first.</description>
+    <errorConditionFormula
+  >NOT(Is_Action_Plan_Template_Editable__c)</errorConditionFormula>
+    <errorMessage
+  >Active template is not editable, Deactivate first.</errorMessage>
+</ValidationRule>
