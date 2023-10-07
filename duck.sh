@@ -10,10 +10,10 @@ function help() {
 }
 
 function main() {
-    help
     while getopts c:b: option
     do
         case $option in
+            h) help;;
             c) COMMAND=$OPTARG;;
             b) BROWSER=$OPTARG;;
         esac

@@ -3,7 +3,7 @@
     <fullName>IsAdHocItemCreationEnabled__c</fullName>
     <defaultValue>false</defaultValue>
     <externalId>false</externalId>
-    <label>IsAdHocItemCreationEnabled</label>
+    <label>Let users add items to action plans</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>

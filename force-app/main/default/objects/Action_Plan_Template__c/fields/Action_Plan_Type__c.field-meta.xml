@@ -20,6 +20,16 @@
                 <default>false</default>
                 <label>Visit Execution</label>
             </value>
+            <value>
+                <fullName>Vehicle Admin</fullName>
+                <default>false</default>
+                <label>Vehicle Admin</label>
+            </value>
+            <value>
+                <fullName>Customer Relationship</fullName>
+                <default>false</default>
+                <label>Customer Relationship</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

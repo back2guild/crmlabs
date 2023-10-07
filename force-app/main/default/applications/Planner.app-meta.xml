@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment
+    >Action override created by Lightning App Builder during activation.</comment>
+        <content>Action_Plan_Template_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Action_Plan_Template__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment
+    >Action override created by Lightning App Builder during activation.</comment>
+        <content>Action_Plan_Template_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Action_Plan_Template__c</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#14334E</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Planner</label>
+    <navType>Standard</navType>
+    <tabs>Action_Plan_Template__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Planner_UtilityBar</utilityBar>
+</CustomApplication>
