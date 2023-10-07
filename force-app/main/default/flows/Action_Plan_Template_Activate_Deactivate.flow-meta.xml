@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Mark_Action_Plan_Template_Published</name>
+        <label>Mark Action Plan Template Published</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference
+      >Get_Action_Context_Record.Is_Published__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference
+      >Mark_Action_Plan_Template_Version_To_Published</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Mark_Action_Plan_Template_Version_To_Published</name>
+        <label>Mark Action Plan Template Version To Published</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference
+      >Get_Latest_Action_Plan_Template_Version.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Published</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Action_Plan_Template</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <name>NotEligible2Publish</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Template is published.</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Is_Valid_To_Publish</name>
+        <label>Is Valid To Publish</label>
+        <locationX>182</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Action_Plan_Template_Publish</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Publishable</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference
+        >Get_Latest_Action_Plan_Template_Version</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference
+        >Get_Action_Context_Record.Is_Published__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference
+        >Get_Latest_Action_Plan_Template_Version.Is_Action_Plan_Template_Editable__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference
+        >Get_Action_Context_Record.Action_Plan_Template_Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Published</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference
+        >Mark_Action_Plan_Template_Published</targetReference>
+            </connector>
+            <label>Is Publishable</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel
   >Action Plan Template Activate / Deactivate {!$Flow.CurrentDateTime}</interviewLabel>
@@ -24,23 +117,123 @@
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
-    <screens>
-        <name>Activate</name>
-        <label>Activate</label>
-        <locationX>176</locationX>
+    <recordLookups>
+        <name>Get_Action_Context_Record</name>
+        <label>Get Action Context Record</label>
+        <locationX>182</locationX>
         <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference
+      >Get_Latest_Action_Plan_Template_Version</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Action_Plan_Template__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Latest_Action_Plan_Template_Version</name>
+        <label>Get Latest Action Plan Template Version</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound
+    >false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Valid_To_Publish</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Action_Plan_Template__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference
+        >Get_Action_Context_Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Action_Plan_Template_Version__c</object>
+        <sortField>Version__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Action_Plan_Template</name>
+        <label>Update Action Plan Template</label>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
+        <connector>
+            <targetReference
+      >Update_Action_Plan_Template_Version</targetReference>
+        </connector>
+        <inputReference>Get_Action_Context_Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Action_Plan_Template_Version</name>
+        <label>Update Action Plan Template Version</label>
+        <locationX>50</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference
+      >Action_Plan_Template_Activate_Deactivate</targetReference>
+        </connector>
+        <inputReference>Get_Latest_Action_Plan_Template_Version</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>Action_Plan_Template_Activate_Deactivate</name>
+        <label>Action Plan Template Activate/Deactivate</label>
+        <locationX>50</locationX>
+        <locationY>890</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <fields>
+            <name>ActionPlanTemplateVersionPublished</name>
+            <fieldText
+      >&lt;p&gt;&lt;strong style=&quot;color: rgb(7, 115, 27);&quot;&gt;&lt;u&gt;Success&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Action plan template published successfully.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Action_Plan_Template_Publish</name>
+        <label>Action Plan Template - Publish</label>
+        <locationX>314</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>DataInConsistency</name>
+            <fieldText
+      >&lt;p&gt;&lt;strong style=&quot;color: rgb(221, 6, 6);&quot;&gt;&lt;u&gt;Error&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Data anomoly detected, Please reachout to system administrator / support staff to investigate.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Activate</targetReference>
+            <targetReference>Get_Action_Context_Record</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
 </Flow>

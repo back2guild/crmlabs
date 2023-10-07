@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action_Plan_Template</fullName>
+    <fields>Name</fields>
+    <fields>Unique_Name__c</fields>
+    <fields>Is_Published__c</fields>
+    <fields>CreatedById</fields>
+    <fields>LastModifiedById</fields>
+    <fields>OwnerId</fields>
+    <label>Action Plan Template</label>
+</CompactLayout>

@@ -1,3 +1,5 @@
-SELECT Action_Plan_Type__c, CreatedById, CreatedDate, Description__c, Id, IsAdHocItemCreationEnabled__c, IsDeleted, Is_Action_Plan_Template_Editable__c, LastModifiedById, LastModifiedDate, LastReferencedDate, LastViewedDate, Name, OwnerId, SystemModstamp, TargetEntityType__c, Unique_Name__c
+SELECT Action_Plan_Type__c, CreatedById, CreatedDate, Description__c, Id, IsAdHocItemCreationEnabled__c, IsDeleted, Is_Published__c, LastModifiedById, LastModifiedDate, LastReferencedDate, LastViewedDate, Name, OwnerId, SystemModstamp, TargetEntityType__c, Unique_Name__c, (select id,action_plan_template__c,activation_datetime__c,inactivation_datetime__c,status__c,version__c from APTV2APT__r)
   FROM Action_Plan_Template__c
+  
+
   

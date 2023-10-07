@@ -137,6 +137,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Action_Plan_Template__c.Action_Plan_Template_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Action_Plan_Template__c.Action_Plan_Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -152,8 +157,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field
-    >Action_Plan_Template__c.Is_Action_Plan_Template_Editable__c</field>
+        <field>Action_Plan_Template__c.Is_Published__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
