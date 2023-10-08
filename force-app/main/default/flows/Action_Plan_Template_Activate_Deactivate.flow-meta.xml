@@ -14,6 +14,14 @@
                 <booleanValue>true</booleanValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference
+      >Get_Action_Context_Record.Action_Plan_Template_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Published</stringValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference
       >Mark_Action_Plan_Template_Version_To_Published</targetReference>
@@ -228,7 +236,7 @@
             <targetReference>Get_Action_Context_Record</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>
