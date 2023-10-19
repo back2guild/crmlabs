@@ -2,4 +2,5 @@ SELECT Action_Plan_Type__c, CreatedById, CreatedDate, Description__c, Id, IsAdHo
   FROM Action_Plan_Template__c
   
 
-  
+  SELECT Action_Plan_Type__c, CreatedById, CreatedDate, Description__c, Id, IsAdHocItemCreationEnabled__c, IsDeleted, Is_Action_Plan_Template_Editable__c, LastModifiedById, LastModifiedDate, LastReferencedDate, LastViewedDate, Name, OwnerId, SystemModstamp, TargetEntityType__c, Unique_Name__c
+  FROM Action_Plan_Template__c where id='a001y0000076YFoAAM'
