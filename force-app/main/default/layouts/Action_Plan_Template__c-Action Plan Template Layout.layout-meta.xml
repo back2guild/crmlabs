@@ -23,6 +23,10 @@
                 <behavior>Readonly</behavior>
                 <field>Unique_Name__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Current_Version__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

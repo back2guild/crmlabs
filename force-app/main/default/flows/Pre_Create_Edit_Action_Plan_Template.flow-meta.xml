@@ -18,7 +18,7 @@
     <decisions>
         <name>Is_New_Or_Edit</name>
         <label>Is New Or Edit</label>
-        <locationX>270</locationX>
+        <locationX>314</locationX>
         <locationY>287</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -79,7 +79,7 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>144</locationX>
+        <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Is_New_Or_Edit</targetReference>
