@@ -3,6 +3,5 @@
     <fullName>Action_Plan_Template</fullName>
     <fields>Action_Plan_Type__c</fields>
     <fields>OwnerId</fields>
-    <fields>Is_Published__c</fields>
     <label>Action Plan Template</label>
 </CompactLayout>

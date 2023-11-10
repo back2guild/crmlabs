@@ -148,11 +148,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Action_Plan_Template__c.Is_Published__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Action_Plan_Template__c.TargetEntityType__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -192,6 +187,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Action_Plan_Audit__c-Action Plan Audit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Action_Plan_Item__c-Action Plan Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -209,6 +207,15 @@
     <layoutAssignments>
         <layout>Action_Plan__c-Action Plan Layout</layout>
     </layoutAssignments>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Action_Plan_Audit__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
