@@ -3,6 +3,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>actionPlanTemplateItemContainer</componentName>
+                <identifier>c_actionPlanTemplateItemContainer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-68l4dzyd8pq</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentName>force:detailPanel</componentName>
                 <identifier>force_detailPanel</identifier>
             </componentInstance>
@@ -36,34 +46,26 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>entityNames</name>
-                    <valueList>
-                        <valueListItems>
-                            <value>Action_Plan_Template__c</value>
-                        </valueListItems>
-                    </valueList>
+                    <name>active</name>
+                    <value>true</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Standard.RecentItems</value>
+                    <name>body</name>
+                    <value>Facet-68l4dzyd8pq</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>maxRecords</name>
-                    <value>3</value>
+                    <name>title</name>
+                    <value>Items</value>
                 </componentInstanceProperties>
-                <componentName>flexipage:recentItems</componentName>
-                <identifier>flexipage_recentItems</identifier>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-68l4dzyd8pq</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>active</name>
-                    <value>true</value>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>body</name>
@@ -89,20 +91,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-68l4dzyd8pq</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Items</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
         <name>maintabs</name>
