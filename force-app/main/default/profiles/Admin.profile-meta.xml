@@ -8,6 +8,26 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Action_Plan_Audit__c.Action__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Action_Plan_Audit__c.Comment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Action_Plan_Audit__c.Planner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Action_Plan_Audit__c.Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Action_Plan_Item__c.Action_Plan_Item__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -270,6 +290,10 @@
         <object>Action_Plan__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <tabVisibilities>
+        <tab>Action_Plan_Audit__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>Action_Plan_Template__c</tab>
         <visibility>DefaultOn</visibility>
