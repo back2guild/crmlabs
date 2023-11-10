@@ -34,7 +34,7 @@
     <assignments>
         <name>Prepare_Action_Plan_Template_Version_1</name>
         <label>Prepare Action Plan Template Version</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
         <locationY>647</locationY>
         <assignmentItems>
             <assignToReference>ActionPlanTemplateVersion.Action_Plan_Template__c</assignToReference>
@@ -64,7 +64,7 @@
     <decisions>
         <name>Action_Plan_Template</name>
         <label>Action Plan Template</label>
-        <locationX>710</locationX>
+        <locationX>974</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -101,7 +101,7 @@
     <decisions>
         <name>Is_Template_Published</name>
         <label>Is Template Published</label>
-        <locationX>710</locationX>
+        <locationX>1106</locationX>
         <locationY>539</locationY>
         <defaultConnectorLabel>Default</defaultConnectorLabel>
         <rules>
@@ -186,23 +186,93 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
+        <name>Copy_1_of_Log_Incident</name>
+        <label>Log Incident</label>
+        <locationX>842</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>Action__c</field>
+            <value>
+                <stringValue>Create</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Comment__c</field>
+            <value>
+                <stringValue>Error creating action plan template version : {!$Flow.FaultMessage}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Planner__c</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Action_Plan_Audit__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>Create_New_Action_Plan_Template_Version</name>
         <label>Create New Action Plan Template Version</label>
         <locationX>50</locationX>
         <locationY>539</locationY>
+        <faultConnector>
+            <targetReference>Log_Incident</targetReference>
+        </faultConnector>
         <inputReference>ActionPlanTemplateVersion</inputReference>
     </recordCreates>
     <recordCreates>
         <name>Create_New_Action_Plan_Template_Version_1</name>
         <label>Create New Action Plan Template Version</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
         <locationY>755</locationY>
+        <faultConnector>
+            <targetReference>Copy_1_of_Log_Incident</targetReference>
+        </faultConnector>
         <inputReference>ActionPlanTemplateVersion</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>Log_Incident</name>
+        <label>Log Incident</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>Action__c</field>
+            <value>
+                <stringValue>Create</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Comment__c</field>
+            <value>
+                <stringValue>Error creating action plan template version : {!$Flow.FaultMessage}</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Planner__c</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Action_Plan_Audit__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Get_Action_Plan_Template_Version</name>
         <label>Get Action Plan Template Version</label>
-        <locationX>710</locationX>
+        <locationX>1106</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -223,7 +293,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>584</locationX>
+        <locationX>848</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Action_Plan_Template</targetReference>
@@ -232,7 +302,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>ActionPlanTemplateVersion</name>
         <dataType>SObject</dataType>
