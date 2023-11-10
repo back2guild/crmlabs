@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Action_Plan_Type__c</fullName>
     <externalId>false</externalId>
@@ -11,24 +11,25 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>Execution</fullName>
+                <default>false</default>
+                <label>Execution</label>
+            </value>
+            <value>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+                <label>Workflow</label>
+            </value>
+            <value>
+                <fullName>Visit</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+            <value>
                 <fullName>Industries</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Industries</label>
-            </value>
-            <value>
-                <fullName>Visit Execution</fullName>
-                <default>false</default>
-                <label>Visit Execution</label>
-            </value>
-            <value>
-                <fullName>Vehicle Admin</fullName>
-                <default>false</default>
-                <label>Vehicle Admin</label>
-            </value>
-            <value>
-                <fullName>Customer Relationship</fullName>
-                <default>false</default>
-                <label>Customer Relationship</label>
             </value>
         </valueSetDefinition>
     </valueSet>

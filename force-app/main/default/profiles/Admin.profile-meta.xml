@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>Planner</application>
@@ -38,8 +38,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field
-    >Action_Plan_Template_Item_Value__c.Action_Plan_Template_Item__c</field>
+        <field>Action_Plan_Template_Item_Value__c.Action_Plan_Template_Item__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -49,8 +48,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field
-    >Action_Plan_Template_Item_Value__c.Item_Entity_Field_Name__c</field>
+        <field>Action_Plan_Template_Item_Value__c.Item_Entity_Field_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -70,8 +68,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field
-    >Action_Plan_Template_Item__c.Action_Plan_Template_Version__c</field>
+        <field>Action_Plan_Template_Item__c.Action_Plan_Template_Version__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -116,8 +113,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field
-    >Action_Plan_Template_Version__c.Is_Action_Plan_Template_Editable__c</field>
+        <field>Action_Plan_Template_Version__c.Is_Action_Plan_Template_Editable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -132,17 +128,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Action_Plan_Template__c.Action_Plan_Template_Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Action_Plan_Template__c.Action_Plan_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Action_Plan_Template__c.Current_Version__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -157,8 +143,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field
-    >Action_Plan_Template__c.Is_Action_Plan_Template_Editable__c</field>
+        <field>Action_Plan_Template__c.Is_Action_Plan_Template_Editable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -210,16 +195,13 @@
         <layout>Action_Plan_Item__c-Action Plan Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout
-    >Action_Plan_Template_Item_Value__c-Action Plan Template Item Value Layout</layout>
+        <layout>Action_Plan_Template_Item_Value__c-Action Plan Template Item Value Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout
-    >Action_Plan_Template_Item__c-Action Plan Template Item Layout</layout>
+        <layout>Action_Plan_Template_Item__c-Action Plan Template Item Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout
-    >Action_Plan_Template_Version__c-Action Plan Template Version Layout</layout>
+        <layout>Action_Plan_Template_Version__c-Action Plan Template Version Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Action_Plan_Template__c-Action Plan Template Layout</layout>
