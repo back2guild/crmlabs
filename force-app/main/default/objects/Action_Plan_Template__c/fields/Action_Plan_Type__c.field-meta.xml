@@ -16,14 +16,19 @@
                 <label>Execution</label>
             </value>
             <value>
-                <fullName>Workflow</fullName>
+                <fullName>Milestone</fullName>
                 <default>false</default>
-                <label>Workflow</label>
+                <label>Milestone</label>
             </value>
             <value>
                 <fullName>Visit</fullName>
                 <default>false</default>
                 <label>Visit</label>
+            </value>
+            <value>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+                <label>Workflow</label>
             </value>
             <value>
                 <fullName>Industries</fullName>
